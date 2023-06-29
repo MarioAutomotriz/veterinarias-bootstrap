@@ -1,0 +1,165 @@
+/****************** Custom Propeties ******************/
+:root {
+    --first-color: rgb(217, 0, 98);
+    --second-color:rgb(54,143,239)
+;}
+
+/****************** Reset Styles     ******************/
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image:linear-gradient(-45deg, #efe4da 0%, #358399 100%);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+li{
+    list-style: none;
+}
+
+/****************** Boostrap Styles  ******************/
+.nav-item {
+    background-color:white;
+    color: white;
+    font-weight: bold;
+    transition: all .3s ease-out;
+
+}
+
+.nav-link {
+    background-color:transparent;
+    padding-left: .5rem;
+    color: black;
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+.nav-link:hover {
+    color: var(--second-color);
+}
+
+
+/******************    My styles     ******************/
+.bg-first-color{
+    background-color: var(--second-color);
+}
+.navbar-brand img {
+    width: auto;
+    height: 4rem;
+
+}
+.move{
+    animation: move-vector 4s linear infinite;
+}
+@keyframes move-vector{
+	0%{
+		transform: translateY(20px);
+
+	}50%{
+		transform: translateY(0px);
+	}100%{
+		transform: translateY(20px);
+	}
+}
+.min-vh-70 {
+    min-height: 70vh !important;
+  }
+.cat{
+    width:8rem;
+}
+
+
+.cont{
+    display: flex;
+}
+.cont .map{ 
+    width:100%;
+    height:600px;
+}
+.cartas{
+    width: 100%;
+    max-width: 20%;
+    height: 600px;
+    overflow-y:auto ;
+    scroll-snap-type:y;
+    cursor: grab;
+    scroll-behavior: smooth;
+}
+.cont-cartas{
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    max-width: 240px;
+    width: 100%;
+    min-height:calc(300px - .5rem) ;
+    scroll-snap-align: start;
+    user-select: none;
+}
+.card-img-top{
+    width: 100%;
+    height:150px;
+}
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+    .nav-link:hover {
+        color: var(--second-color);
+    }
+
+    .cont{
+        display: block;
+    }
+    .cont-cartas{
+        display: flex;
+        flex-direction: row;
+        grid-gap: 1rem;
+    }
+    .cartas{
+        width: 100%;
+        max-width:100%;
+        height: 310px;
+        overflow-x:auto ;
+        scroll-snap-type:x;
+        cursor: grab;
+        scroll-behavior: smooth;
+    }
+    .card{
+        min-width:calc(50% - .5rem) ;
+        scroll-snap-align: start;
+        user-select: none;
+    }
+
+}
+@media (max-width: 768px) {
+    .nav-item:hover {
+        background-color: var(--second-color);
+    }
+}
+@media (max-width: 576px) {
+    .cont .map{ 
+        width:100%;
+        height:450px;
+    }
+    .card{
+        min-width:calc(50% - .5rem) ;
+        scroll-snap-align: start;
+        user-select: none;
+    }
+}
+
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+   
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
