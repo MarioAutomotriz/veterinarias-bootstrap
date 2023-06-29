@@ -189,10 +189,10 @@ function iniciarMap() {
     zoom: 13,
     center: coord,
     styles: [
-      {
-        featureType: 'poi.business',
-        stylers: [{ visibility: 'off' }] // Oculta los negocios locales
-      },
+      // {
+      //   featureType: 'poi.business',
+      //   stylers: [{ visibility: 'off' }] // Oculta los negocios locales
+      // },
       {
         elementType: 'geometry',
         stylers: [{ color: '#1d1c1d' }] // Cambia el color de fondo del mapa
