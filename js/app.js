@@ -1,3 +1,5 @@
+import { veterinarias } from "./db.js"
+
 // variables
 
 const estado = document.querySelector('#estado')
