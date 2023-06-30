@@ -126,13 +126,11 @@ li{
         height: 310px;
         overflow-x:auto ;
         scroll-snap-type:x;
-        cursor: grab;
         scroll-behavior: smooth;
     }
     .card{
         min-width:calc(50% - .5rem) ;
         scroll-snap-align: start;
-        user-select: none;
     }
 
 }
