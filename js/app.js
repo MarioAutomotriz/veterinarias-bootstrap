@@ -1,4 +1,3 @@
-import { veterinarias } from "./db.js"
 
 // variables
 

@@ -1,4 +1,4 @@
-export const veterinarias = [
+ const veterinarias = [
     {
         id: 'vet1',
         titulo: 'Veterinaria Pattas',
