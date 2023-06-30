@@ -8,7 +8,7 @@ const reesultado = document.querySelector('#cartas')
 
 
 // eventos
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     mostrarveterinarias(veterinarias);
 });
 
@@ -34,8 +34,8 @@ const datosBusqueda = {
     estado: '',
     servicio: '',
 }
+var map
 var coord1, coord2, coord3, coord4, coord5;
-
 // funciones
 function mostrarveterinarias(veterinarias) {
     limpiarHtml();//elimina el html previo
@@ -85,17 +85,10 @@ function mostrarveterinarias(veterinarias) {
 
         const boton = document.createElement('a');
         boton.classList.add('btn', 'btn-primary');
+        boton.setAttribute('id', id);
         boton.setAttribute('href', enlace);
         boton.innerText = 'Visitar';
-
-        boton.addEventListener('click', function (e) {
-            e.preventDefault();
-            var lat = coord1.lat;
-            var lng = coord1.lng;
-            map.panTo({ lat: lat, lng: lng });
-            console.log('click')
-        })
-
+        
         //insertar en el html
         figure.appendChild(img)
         tarjeta.appendChild(figure);
@@ -111,6 +104,7 @@ function mostrarveterinarias(veterinarias) {
     })
 
 }
+
 function limpiarHtml() {
     while (reesultado.firstChild) {
         reesultado.removeChild(reesultado.firstChild)
@@ -164,7 +158,7 @@ function filtrarcolonia(vet) {
     return vet;
 }
 
-var map;
+
 
 var tarjeta1 = document.getElementById('vet1');
 var tarjeta2 = document.getElementById('vet2');
@@ -174,31 +168,31 @@ var tarjeta5 = document.getElementById('vet5');
 
 
 
-// tarjeta1.addEventListener('click', function () {
-//     var lat = coord1.lat;
-//     var lng = coord1.lng;
-//     map.panTo({ lat: lat, lng: lng });
-// })
-// tarjeta2.addEventListener('click', function () {
-//     var lat = coord2.lat;
-//     var lng = coord2.lng;
-//     map.panTo({ lat: lat, lng: lng });
-// });
-// tarjeta3.addEventListener('click', function () {
-//     var lat = coord3.lat;
-//     var lng = coord3.lng;
-//     map.panTo({ lat: lat, lng: lng });
-// });
-// tarjeta4.addEventListener('click', function () {
-//     var lat = coord4.lat;
-//     var lng = coord4.lng;
-//     map.panTo({ lat: lat, lng: lng });
-// });
-// tarjeta5.addEventListener('click', function () {
-//     var lat = coord5.lat;
-//     var lng = coord5.lng;
-//     map.panTo({ lat: lat, lng: lng });
-// });
+ tarjeta1.addEventListener('click', function () {
+     var lat = coord1.lat;
+     var lng = coord1.lng;
+     map.panTo({ lat: lat, lng: lng });
+ })
+ tarjeta2.addEventListener('click', function () {
+     var lat = coord2.lat;
+     var lng = coord2.lng;
+     map.panTo({ lat: lat, lng: lng });
+ });
+ tarjeta3.addEventListener('click', function () {
+     var lat = coord3.lat;
+     var lng = coord3.lng;
+     map.panTo({ lat: lat, lng: lng });
+ });
+ tarjeta4.addEventListener('click', function () {
+     var lat = coord4.lat;
+     var lng = coord4.lng;
+     map.panTo({ lat: lat, lng: lng });
+ });
+ tarjeta5.addEventListener('click', function () {
+     var lat = coord5.lat;
+     var lng = coord5.lng;
+     map.panTo({ lat: lat, lng: lng });
+ });
 
 function iniciarMap() {
     var coord = { lat: 16.7940431, lng: -99.8029122 };
