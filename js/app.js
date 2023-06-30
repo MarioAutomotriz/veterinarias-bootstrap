@@ -34,6 +34,7 @@ const datosBusqueda ={
     servicio:'',
 }
 
+
 // funciones
 function mostrarveterinarias(veterinarias){
 limpiarHtml();//elimina el html previo
@@ -154,4 +155,108 @@ function filtrarcolonia(vet){
     return vet;
 }
 
+const tarjeta1 = document.querySelector('#vet1', llamar)
 
+function llamar(){
+    tarjeta1.addEventListener('click', function(){
+        console.log('click')
+    })
+}
+
+function iniciarMap() {
+    var coord = { lat: 16.7940431, lng: -99.8029122 };
+  
+    coord1 = { lat: 16.80093680747825, lng: -99.80409096199409 };
+    coord2 = { lat: 16.807644168779564, lng: -99.82223532793019 };
+    coord3 = { lat: 16.7997121, lng: -99.8066849 };
+    coord4 = { lat: 16.842807133531252, lng: -99.81245062952244 };
+    coord5 = { lat: 16.7972851, lng: -99.8098145 };
+    var coord6 = { lat: 16.7972967, lng: -99.8091473 };
+    var coord7 = { lat: 16.7993173, lng: -99.8041376 };
+    var coord8 = { lat: 16.800165, lng: -99.8165951 };
+    var coord9 = { lat: 16.7997702, lng: -99.8169348 };
+  
+    map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: coord,
+      styles: [
+         {
+           featureType: 'poi.business',
+         stylers: [{ visibility: 'off' }] // Oculta los negocios locales
+        },
+        {
+          elementType: 'geometry',
+          stylers: [{ color: '#1d1c1d' }] // Cambia el color de fondo del mapa
+        },
+        {
+          elementType: 'labels.text.stroke',
+          stylers: [{ color: '#141414' }] // Cambia el color del contorno de las etiquetas
+        },
+        {
+          elementType: 'labels.text.fill',
+          stylers: [{ color: '#ffffff' }] // Cambia el color del texto de las etiquetas
+        },
+        {
+          featureType: 'water',
+          elementType: 'geometry',
+          stylers: [{ color: '#131e34' }] // Cambia el color del agua
+        },
+        {
+          featureType: 'landscape',
+          elementType: 'geometry',
+          stylers: [{ color: '#141414' }] // Cambia el color del paisaje
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry',
+          stylers: [{ color: '#3a3e40' }] // Cambia el color de las carreteras
+        },
+        {
+          featureType: 'poi',
+          elementType: 'geometry',
+          stylers: [{ color: '#dddddd' }] // Cambia el color de los puntos de interés
+        },
+        {
+          featureType: 'administrative',
+          elementType: 'geometry',
+          stylers: [{ color: '#a7a7a7' }] // Cambia el color de los elementos administrativos
+        },
+  
+      ],
+      // gestureHandling: 'greedy',
+  
+    });
+  
+    var iconoPersonalizado = {
+      url: './img/iconlocation.png',
+      scaledSize: new google.maps.Size(30, 50), // Tamaño del ícono
+    };
+    var marker1 = new google.maps.Marker({
+      position: coord1,
+      map: map,
+      icon: iconoPersonalizado,
+    });
+  
+    var marker2 = new google.maps.Marker({
+      position: coord2,
+      map: map,
+      icon: iconoPersonalizado,
+    });
+    var marker3 = new google.maps.Marker({
+      position: coord3,
+      map: map,
+      icon: iconoPersonalizado,
+    });
+    var marker4 = new google.maps.Marker({
+      position: coord4,
+      map: map,
+      icon: iconoPersonalizado,
+    });
+    var marker5 = new google.maps.Marker({
+      position: coord5,
+      map: map,
+      icon: iconoPersonalizado,
+    });
+  
+    // Resto de los marcadores ...
+  }

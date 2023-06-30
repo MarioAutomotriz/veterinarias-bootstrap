@@ -52,10 +52,10 @@ const veterinarias = [
         {
           id: 'vet6',
           titulo: 'veterinaria Pets',
-          texto: 'coloso',
+          texto: 'L.D.Colosio',
           imagen: '../img/veterinarias/vete6.jpg',
           enlace: '',
-          colonia:'coloso',
+          colonia:'colosio',
           servicio:'domicilio',
           estado:"abierto",
         },
