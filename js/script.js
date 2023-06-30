@@ -136,42 +136,40 @@
 var map;
 var coord1, coord2, coord3, coord4, coord5;
 
-var tarjeta1 = document.getElementById('vet1',llamadocartas);
-var tarjeta2 = document.getElementById('vet2',llamadocartas);
-var tarjeta3 = document.getElementById('vet3',llamadocartas);
-var tarjeta4 = document.getElementById('vet4',llamadocartas);
-var tarjeta5 = document.getElementById('vet5',llamadocartas);
+var tarjeta1 = document.getElementById('vet1');
+var tarjeta2 = document.getElementById('vet2');
+var tarjeta3 = document.getElementById('vet3');
+var tarjeta4 = document.getElementById('vet4');
+var tarjeta5 = document.getElementById('vet5');
 
 
-function llamadocartas(){
-  tarjeta1.addEventListener('click', function () {
-    var lat = coord1.lat;
-    var lng = coord1.lng;
-    map.panTo({ lat: lat, lng: lng });
-  });
-  
-  tarjeta2.addEventListener('click', function () {
-    var lat = coord2.lat;
-    var lng = coord2.lng;
-    map.panTo({ lat: lat, lng: lng });
-  });
-  tarjeta3.addEventListener('click', function () {
-    var lat = coord3.lat;
-    var lng = coord3.lng;
-    map.panTo({ lat: lat, lng: lng });
-  });
-  tarjeta4.addEventListener('click', function () {
-    var lat = coord4.lat;
-    var lng = coord4.lng;
-    map.panTo({ lat: lat, lng: lng });
-  });
-  tarjeta5.addEventListener('click', function () {
-    var lat = coord5.lat;
-    var lng = coord5.lng;
-    map.panTo({ lat: lat, lng: lng });
-  });
-  
-}
+tarjeta1.addEventListener('click', function () {
+  var lat = coord1.lat;
+  var lng = coord1.lng;
+  map.panTo({ lat: lat, lng: lng });
+});
+
+tarjeta2.addEventListener('click', function () {
+  var lat = coord2.lat;
+  var lng = coord2.lng;
+  map.panTo({ lat: lat, lng: lng });
+});
+tarjeta3.addEventListener('click', function () {
+  var lat = coord3.lat;
+  var lng = coord3.lng;
+  map.panTo({ lat: lat, lng: lng });
+});
+tarjeta4.addEventListener('click', function () {
+  var lat = coord4.lat;
+  var lng = coord4.lng;
+  map.panTo({ lat: lat, lng: lng });
+});
+tarjeta5.addEventListener('click', function () {
+  var lat = coord5.lat;
+  var lng = coord5.lng;
+  map.panTo({ lat: lat, lng: lng });
+});
+
 
 function iniciarMap() {
   var coord = { lat: 16.7940431, lng: -99.8029122 };
