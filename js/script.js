@@ -133,7 +133,8 @@
 
 
 
-
+var map;
+var coord1, coord2, coord3, coord4, coord5;
 
 var tarjeta1 = document.getElementById('vet1',llamadocartas);
 var tarjeta2 = document.getElementById('vet2',llamadocartas);
