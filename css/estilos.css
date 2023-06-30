@@ -80,7 +80,6 @@ li{
     height: 600px;
     overflow-y:auto ;
     scroll-snap-type:y;
-    cursor: grab;
     scroll-behavior: smooth;
 }
 .cont-cartas{
@@ -92,7 +91,6 @@ li{
     width: 100%;
     min-height:calc(300px - .5rem) ;
     scroll-snap-align: start;
-    user-select: none;
 }
 .card-img-top{
     width: 100%;
